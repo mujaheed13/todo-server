@@ -10,8 +10,8 @@ const {authenticator} = require("./middlewares/authenticator.js");
 const {todoRouter} = require("./routes/todo.route.js");
 
 //Middlewares
+app.use(cors({origin:"*"}));
 app.use(json());
-app.use(cors());
 app.use("/todos", authenticator);
 
 //routes
